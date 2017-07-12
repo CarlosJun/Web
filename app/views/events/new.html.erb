@@ -1,0 +1,31 @@
+<h1><center>Adicionar um evento</center></h1>
+<fieldset>
+    <center>
+<%= form_for @event do |f| %>
+    <p>
+        <%= f.select :role, ['Palestra','Workshop','Curso','Outros']%>
+    </p>
+    <p>
+        <%= f.text_field :title, :placeholder => "Titulo" %><br>
+    </p>
+    <p>
+        <%= f.text_field :date, :placeholder => "Data" %><br>        
+    </p>
+    <p>
+        <%= f.text_field :schedule, :placeholder => "Horário" %><br>
+    </p>
+    <p>
+        <%= f.text_field :image, :placeholder => "URL imagem" %><br>
+    </p>
+    <p>
+        <%= f.text_area :description, :placeholder => "Descrição" %><br>
+    </p>
+    <p>
+        <%= f.submit "Adicionar Evento", class: "btn-submit" %>
+    </p>
+    </center>
+  </fieldset>  
+  
+    
+<% end %>
+

@@ -1,0 +1,21 @@
+   <h2><center>Meus Grupos</center> </h2>
+  <div class="container">
+    <% @groups.each do |group| %>
+      <div class="movie">
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <%= image_tag group.image, style: 'height:200;width:300;' %> 
+                <div class="panel panel-primary">
+                  <div class="panel-header"><h3><%= group.title %></h3></div>
+                    <div class="panel-body">
+                      <p>Data: <%= group.size %></p>
+                      <p>Horário: <%= group.description %></p>
+                      <%= link_to "Saber mais", group_path(group) %>
+                    </div>
+                  </div>
+                  <p><a href=<%= group_path(group) %> class="btn btn-primary" role="button">Saber mais</a> </p>
+            </div>
+        </div>
+      </div>
+    <% end %>
+    </div>

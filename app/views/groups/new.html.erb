@@ -1,0 +1,25 @@
+<center>
+<h1>Adicionar um grupo</h1>
+<%= form_for @group do |f| %>
+    <p>
+        <%= f.text_field :title, :placeholder => "Titulo" %><br>
+    </p>
+    <p>
+        <%= f.text_field :size, :placeholder => "Tamanho" %><br>        
+    </p>
+    <p>
+        <%= f.text_field :size, :placeholder => "Tamanho" %><br>
+    </p>
+    <p>
+        <%= f.text_field :image, :placeholder => "URL imagem" %><br>
+    </p>
+    <p>
+        <%= f.text_area :description, :placeholder => "Descrição" %><br>
+    </p>
+    <p>
+        <%= f.submit "Adicionar Grupo", class: "btn-submit" %>
+    </p>
+    
+    
+<% end %>
+</center>

@@ -1,0 +1,24 @@
+<div class="header">
+  <div class="container">
+    <img src="http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/logo-1tm.svg" width="80">
+    <h1>Evento</h1>
+  </div>
+</div>
+
+<div class="destination">
+  <div class="container">
+    <%= image_tag @event.image %>
+
+    <%= form_for(@event) do |f| %>
+      <h2><%= f.text_field :image %></h2>
+      <h2><%= f.text_field :title %></h2>
+      <h3><%= f.text_field :date %></h3>
+      <h4><%= f.text_field :schedule %></h4>
+      <p><%= f.text_area :description, size: "50x5" %></p>
+      <%= button_tag t('buttons.Aplicar'), :class => "btn", name: "change", value: true %>
+      <%= button_tag t('buttons.Cancelar'), :class => "btn", name: "cancel", value: true %>
+    <% end %> 
+    
+    
+  </div>
+</div> 

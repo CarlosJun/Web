@@ -1,0 +1,33 @@
+<div class="header">
+  <div class="container">
+    <img src="http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/logo-1tm.svg" width="80">
+    <h1>Grupo - Adicionar email</h1>
+  </div>
+</div>
+
+<div class="destination">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+
+        <!-- Your code here -->
+        <%= image_tag @group.image %>
+        <h2><%= @group.title %></h2>
+        <h3>Tamanho: <%= @group.size %></h3>
+        <h4>Horário: <%= @group.schedule %></h4>
+        <p><%= @group.description %></p>
+        
+        <%= form_for @email do |f| %>
+        <p>
+          <%= f.email_field :address, :placeholder => "Email" %><br>        
+        </p>
+        <%= link_to "Adicionar email", createEmail_group_path(@group) %>
+        <% end %>
+        
+        
+      
+      </div>
+    </div>
+  </div>
+</div> 
+

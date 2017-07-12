@@ -1,0 +1,18 @@
+<div class="login">
+  <div class="container">
+    <div class="form">
+
+    <h1>Cadastro</h1>
+
+    <%= form_for(@user) do |f| %>
+      <%= f.text_field :entity, :placeholder => "Entidade" %><br>
+      <%= f.text_field :department, :placeholder => "Departamento" %><br>
+      <%= f.email_field :email, :placeholder => "Email" %><br>
+      <%= f.password_field :password, :placeholder => "Senha" %><br>
+      <%= f.submit "Criar conta", class: "btn-submit" %>
+    <% end %>
+
+  
+    </div>
+  </div>
+</div>
